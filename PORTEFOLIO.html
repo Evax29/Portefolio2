@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio d'Eva KILLY</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #121212; /* Fond  */
+            color: #FFFFFF; /* Couleur du texte */
+        }
+
+        header {
+            text-align: center;
+            padding: 50px 0;
+            background-color: #1e1e1e;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin: 0;
+            text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.1);
+        }
+
+        nav {
+            margin: 20px 0;
+        }
+
+        nav a {
+            color: #ffffff;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 1.2em;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #00bcd4; /* Couleur cyan au survol */
+        }
+
+        .portfolio-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .project {
+            background-color: #333333; /* Couleur de fond des projets */
+            border: 2px solid #00bcd4; /* Bordure cyan */
+            border-radius: 10px;
+            margin: 20px;
+            width: 300px;
+            overflow: hidden;
+            transition: transform 0.3s;
+            box-shadow: 0 0 15px rgba(0, 188, 212, 0.5);
+        }
+
+        .project:hover {
+            transform: scale(1.05); /* Légère agrandissement au survol */
+        }
+
+        .project img {
+            width: 100%;
+            height: auto;
+        }
+
+        .project-description {
+            padding: 15px;
+        }
+
+        .project-title {
+            font-size: 1.5em;
+            margin: 0;
+            color: #00bcd4; /* Titre en cyan */
+        }
+
+        .project-text {
+            font-size: 1em;
+            margin: 10px 0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #1e1e1e;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .content {
+            max-width: 800px;
+            margin: auto;
+            text-align: center;
+        }
+
+        a {
+            color: #00bcd4;
+            text-decoration: none;
+            font-size: 1.1em;
+            cursor: pointer;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Portfolio d'Eva KILLY</h1>
+    <nav>
+        <a href="#about">À propos</a>
+        <a href="#projects">Projets</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<section id="about">
+    <h2>À propos</h2>
+    <p>Étudiante aux Beaux-Arts d'Aix-en-Provence, je développe une pratique artistique pluridisciplinaire qui englobe le dessin, la peinture et diverses créations. Mon travail s'intéresse particulièrement aux thématiques du temps et de la répétition, explorant comment ces concepts façonnent notre perception et notre expérience du monde. À travers mes œuvres, je cherche à questionner et à représenter la nature éphémère des moments et la manière dont ils s'inscrivent dans notre mémoire collective et individuelle.</p>
+</section>
+
+<section id="projects" class="portfolio-section">
+    <h2>Projets</h2>
+
+    <div class="project">
+        <a href="javascript:void(0);" onclick="openProject('projet1')">
+            <img src="IMG1.jpeg" alt="Projet 1">
+            <div class="project-description">
+                <h3 class="project-title">1 191 689</h3>
+                <p class="project-text">Chaque pas que nous faisons laisse une empreinte numérique, minutieusement enregistrée par nos téléphones, révélant nos déplacements quotidiens.</p>
+            </div>
+        </a>
+    </div>
+
+    <div class="project">
+        <a href="javascript:void(0);" onclick="openProject('projet2')">
+            <img src="IMG2.jpeg" alt="Projet 2">
+            <div class="project-description">
+                <h3 class="project-title">Écoulement du temps</h3>
+                <p class="project-text">Un livre de 6240 pages représentant chaque heure sur 260 jours, utilisant du papier de magazine pour symboliser l'encombrement visuel de nos vies.</p>
+            </div>
+        </a>
+    </div>
+
+    <div class="project">
+        <a href="javascript:void(0);" onclick="openProject('projet3')">
+            <img src="BlablaBulle.jpeg" alt="Projet 3">
+            <div class="project-description">
+                <h3 class="project-title">Les aventures Blabla Bulle</h3>
+                <p class="project-text">Un projet illustratif explorant la continuité narrative et la représentation du temps à travers des compositions visuelles.</p>
+            </div>
+        </a>
+    </div>
+</section>
+
+<footer>
+    <p>Contact: eva.killy@icloud.com | Suivez-moi sur instagram: arts_kly</p>
+</footer>
+
+<script>
+    function openProject(project) {
+        let htmlContent = '';
+        if (project === 'projet1') {
+            htmlContent = `
+                <div class="content">
+                    <h1>1 191 689</h1>
+                    <p>Chaque pas que nous faisons laisse une empreinte numérique, minutieusement enregistrée par nos téléphones. Ainsi, au fil des 365 jours de l'année, une cartographie se dessine, révélant nos déplacements et la trace invisible de notre vie quotidienne, capturée pixel par pixel par ces compagnons électroniques.</p>
+                    <p><a href="javascript:void(0);" onclick="closeProject()">Retour au portfolio</a></p>
+                </div>`;
+        } else if (project === 'projet2') {
+            htmlContent = `
+                <div class="content">
+                    <h1>Écoulement du temps</h1>
+                    <p>Un livre de 6240 pages représentant chaque heure sur 260 jours, utilisant du papier de magazine pour symboliser l'encombrement visuel de nos vies. Ce projet explore comment ces distractions influencent notre perception du temps.</p>
+                    <p><a href="javascript:void(0);" onclick="closeProject()">Retour au portfolio</a></p>
+                </div>`;
+        } else if (project === 'projet3') {
+            htmlContent = `
+                <div class="content">
+                    <h1>Les aventures Blabla Bulle</h1>
+                    <p>Ce projet illustratif explore la continuité narrative et la représentation du temps à travers des compositions visuelles captivantes, alliant art et storytelling.</p>
+                    <p><a href="javascript:void(0);" onclick="closeProject()">Retour au portfolio</a></p>
+                </div>`;
+        }
+        document.body.innerHTML = htmlContent;
+    }
+
+    function closeProject() {
+        location.reload(); // Recharger la page pour retourner au portfolio
+    }
+</script>
+
+</body>
+</html>
+
+
+
